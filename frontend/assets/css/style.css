@@ -1,0 +1,57 @@
+body {
+  background-color: var(--color-fondo);
+  --color-principal: #758fc5;
+  --color-secundario: #5f4e7a;
+  --gradiente-principal: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+  --color-fondo: #f6f4f0;
+}
+
+/* Encabezado de la página */
+.encabezado {
+  background: var(--gradiente-principal);
+  color: #fff;
+}
+
+/* Mensaje de estado (cargando, resultados, errores) */
+#mensaje {
+  font-weight: 500;
+}
+
+/* Tarjetas / Transition al pasar el cursor */
+.tarjeta-raza {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tarjeta-raza::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradiente-principal);
+}
+
+.tarjeta-raza:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Foto al final de la tarjeta / Mismo alto */
+.foto-raza {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Recuadro "Sin foto" / Mismo tamaño que una foto */
+.sin-foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4e1db;
+  color: #7a766d;
+  font-weight: 500;
+  border-radius: 0 0 var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
+}
