@@ -4,7 +4,7 @@
 
 1. **Crear la base de datos**
    ```
-   mysql -u root -p < backend/datos.sql
+   source C:/Users/.../proyecto-gatos/backend/datos.sql
    ```
 2. **Configurar el backend**
    ```
